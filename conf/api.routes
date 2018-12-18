@@ -1,0 +1,28 @@
+# API Routes
+# This file defines all api routes (Higher priority routes first)
+# For OpenAPI documentation capabilties see: https://github.com/iheartradio/play-swagger
+# ~~~~
+
+###
+#  description: "Get them all"
+#  responses:
+#    200:
+#      description: success
+###
+GET     /get                        controllers.api.ApiController.get
+
+###
+#  description: "Doing nothing"
+#  responses:
+#    201:
+#      description: created
+###
+POST    /add/*s                     controllers.api.ApiController.add(s: String)
+
+###
+#  description: "Call me"
+#  responses:
+#    200:
+#      description: success
+###
+DELETE  /delete/*id                 controllers.api.ApiController.delete(id: String)
